@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Encrypt & Decrypt Text" />
+    <meta name="description"
+        content="Encrypt & Decrypt Text Online In cryptography, encryption is the process of transforming information (referred to as plaintext) using an algorithm (called cipher) to make it unreadable to anyone except those possessing special knowledge, usually referred to as a key." />
+    <title>Encrypt & Decrypt Text Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="encodeDecode.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body>
+    <h1>Encrypt & Decrypt Text Online</h1>
+    <section>
+
+        <div>
+            <form action="">
+                <label style="font-weight: 400;font-size: 25px;margin-left: 24%;">Enter your Text in
+                    Box:</label>
+                <textarea name="" id="input" cols="50" rows="10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque adipisci laboriosam recusandae reiciendis vitae, blanditiis optio delectus perspiciatis nobis eum debitis in ipsa architecto nam repellendus, at voluptates, maxime porro?
+            </textarea><br>
+                <label for="shiftAmount" style="margin: 20px 10px"><b>Enter Shift Number:</b></label>
+                <input type="number" name="" id="shiftAmount" value="1"><br>
+                <button type="button" id="enc" class="btn btn-outline-dark">Encrypt Text</button>
+                <button type="button" id="dec" class="btn btn-outline-dark">Decrypt Text</button>
+            </form>
+        </div>
+        <div id="middle"><img
+                src="https://th.bing.com/th/id/OIP.je0b8cj4DLorBlK6nlrbgwHaEK?w=267&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                alt="">
+        </div>
+        <div>
+            <label id="outputTEXT" style="font-weight: 400;font-size: 25px;margin:0px 12%;">The Below Text is
+                Encrypted/Decrypted: </label>
+            <textarea name="" id="output" cols="50" rows="10"
+                placeholder="Your message will be displayed here"></textarea><br>
+            <button onclick="myFunction()" class="btn btn-outline-dark">Copy Text <img
+                    src="https://th.bing.com/th/id/OIP.vpi9nswNXUJquGXxdGG8sgAAAA?pid=ImgDet&w=181&h=181&c=7&dpr=1.25"
+                    alt=""></button>
+        </div>
+    </section>
+
+    <script src="encodeDecode.js"></script>
+
+    <script>
+        function myFunction() {
+            var copyText = document.getElementById("output");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999)
+            document.execCommand("copy");
+            alert("text Copied");
+        }
+
+    </script>
+</body>
+
+</html>
